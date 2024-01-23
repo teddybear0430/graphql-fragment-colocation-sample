@@ -17,7 +17,7 @@ export const UserForm = () => {
     setUser({
       name: nameRef.current!.value,
       age: Number(ageRef.current!.value),
-      email: emailRef.current!.value,
+      email: emailRef.current!.value
     });
   };
 

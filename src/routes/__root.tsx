@@ -1,4 +1,4 @@
-import { Link, Outlet, RootRoute } from '@tanstack/react-router'
+import { Link, Outlet, RootRoute } from "@tanstack/react-router";
 
 export const Route = new RootRoute({
   component: () => (
@@ -6,7 +6,7 @@ export const Route = new RootRoute({
       <div className="p-2 flex gap-2">
         <Link to="/" className="[&.active]:font-bold">
           Home
-        </Link>{' '}
+        </Link>{" "}
         <Link to="/about" className="[&.active]:font-bold">
           About
         </Link>
@@ -14,5 +14,5 @@ export const Route = new RootRoute({
       <hr />
       <Outlet />
     </>
-  ),
-})
+  )
+});
