@@ -1,26 +1,21 @@
-import { useQuery, gql } from "@apollo/client";
-import { CharactersQuery } from "../gql/graphql";
+import { useQuery } from "@apollo/client";
+import { graphql } from "../gql/gql";
 import { Character } from "../components/Character/Character";
 
-export const component = function Index() {
-  const GET_CHARACTERS = gql`
-    query Characters {
-      Page {
-        characters {
-          image {
-            medium
-          }
-          name {
-            native
-          }
-        }
+// GraphQL Code Generatorで生成されたgraphql関数を使って、クエリを定義することで、
+// 型安全にクエリを書くことができる
+const GET_CHARACTERS = graphql(`
+  query Characters {
+    Page {
+      characters {
+        ...CharacterField
       }
     }
-  `;
+  }
+`);
 
-  const { loading, data } = useQuery<CharactersQuery>(GET_CHARACTERS);
-
-  if (!data?.Page?.characters) return <p>No data</p>;
+export const component = function Index() {
+  const { loading, data } = useQuery(GET_CHARACTERS);
 
   return (
     <div>
@@ -28,13 +23,12 @@ export const component = function Index() {
         <p>Loading...</p>
       ) : (
         <>
-          {data.Page.characters.map((character) => (
-            <Character
-              key={character?.name?.native}
-              name={character?.name?.native}
-              image={character?.image?.medium}
-            />
-          ))}
+          {data?.Page?.characters?.map(
+            (character, i) =>
+              character && (
+                <Character key={`character_${i}`} character={character} />
+              )
+          )}
         </>
       )}
     </div>
