@@ -31,6 +31,9 @@ devDependencies:
   '@graphql-codegen/introspection':
     specifier: 4.0.0
     version: 4.0.0(graphql@16.8.1)
+  '@graphql-codegen/typescript':
+    specifier: ^4.0.1
+    version: 4.0.1(graphql@16.8.1)
   '@storybook/addon-essentials':
     specifier: ^7.6.10
     version: 7.6.10(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)

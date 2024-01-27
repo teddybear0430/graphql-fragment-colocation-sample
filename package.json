@@ -22,6 +22,9 @@
   },
   "devDependencies": {
     "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/client-preset": "4.1.0",
+    "@graphql-codegen/introspection": "4.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
@@ -45,8 +48,6 @@
     "prettier": "^3.2.4",
     "storybook": "^7.6.10",
     "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "@graphql-codegen/introspection": "4.0.0",
-    "@graphql-codegen/client-preset": "4.1.0"
+    "vite": "^5.0.8"
   }
 }

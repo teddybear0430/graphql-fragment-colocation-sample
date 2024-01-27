@@ -7,7 +7,8 @@ const config: CodegenConfig = {
   generates: {
     "src/gql/": {
       preset: "client",
-      plugins: []
+      // @graphql-codegen/typescript: GraphQLスキーマに基づいて、TypeScriptの型定義を生成する
+      plugins: ["typescript"]
     }
   }
 };
