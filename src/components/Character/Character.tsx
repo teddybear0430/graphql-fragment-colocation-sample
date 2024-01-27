@@ -1,5 +1,5 @@
-import { graphql } from "../../gql/gql";
-import { FragmentType, useFragment } from "../../gql/fragment-masking";
+import { graphql } from "~/gql/gql";
+import { FragmentType, useFragment } from "~/gql/fragment-masking";
 
 // Fragment Colocationを使って、コンポーネントが必要とするGraphQLのフィールドを定義する
 // Fragment Colocationの取り入れることのメリット

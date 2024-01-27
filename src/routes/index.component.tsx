@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
-import { graphql } from "../gql/gql";
-import { Character } from "../components/Character/Character";
+import { graphql } from "~/gql/gql";
+import { Character } from "~/components/Character/Character";
 
 // GraphQL Code Generatorで生成されたgraphql関数を使って、クエリを定義することで、
 // 型安全にクエリを書くことができる
