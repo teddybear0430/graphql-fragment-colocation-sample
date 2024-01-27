@@ -22,7 +22,6 @@ export function Character(props: {
 }) {
   // useFragmentを使うことで、Fragment Colocationで定義したフィールドからデータを取り出すことができる
   // 逆にuseFragment経由でなければデータの取り出しはできない
-  // MEMO:
   const character = useFragment(CHARACTER_FIELD, props.character);
   return (
     <div>
