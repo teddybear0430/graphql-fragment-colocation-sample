@@ -28,7 +28,11 @@ export function Character(props: {
       <p>{character.name?.native}</p>
       <p>{character.age}</p>
       {character.image?.medium ? (
-        <img src={character.image.medium} alt={character.name?.native || ""} />
+        <img
+          src={character.image.medium}
+          alt={character.name?.native || ""}
+          width={120}
+        />
       ) : (
         <p>No Image</p>
       )}
