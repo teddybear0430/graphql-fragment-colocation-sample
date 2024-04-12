@@ -14,7 +14,7 @@ const GET_CHARACTERS = graphql(`
   }
 `);
 
-export const component = function Index() {
+export const component = function Page() {
   const { loading, data } = useQuery(GET_CHARACTERS);
 
   return (

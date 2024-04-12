@@ -7,8 +7,8 @@ export const Route = new RootRoute({
         <Link to="/" className="[&.active]:font-bold">
           Home
         </Link>{" "}
-        <Link to="/about" className="[&.active]:font-bold">
-          About
+        <Link to="/contact" className="[&.active]:font-bold">
+        Contact
         </Link>
       </div>
       <hr />
