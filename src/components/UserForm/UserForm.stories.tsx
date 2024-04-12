@@ -3,7 +3,7 @@ import { UserForm } from "./UserForm";
 import { expect, within, userEvent } from "@storybook/test";
 
 const meta = {
-  component: UserForm,
+  component: UserForm
 } satisfies Meta<typeof UserForm>;
 
 export default meta;
@@ -15,12 +15,12 @@ export const InputName: Story = {
     const canvas = within(canvasElement);
 
     const nameInput = canvas.getByRole("textbox", {
-      name: "Name",
+      name: "Name"
     });
     await userEvent.type(nameInput, "example-name", {
-      delay: 100,
+      delay: 100
     });
-  },
+  }
 };
 
 // ageの入力
@@ -29,12 +29,12 @@ export const InputAge: Story = {
     const canvas = within(canvasElement);
 
     const ageInput = canvas.getByRole("spinbutton", {
-      name: "Age",
+      name: "Age"
     });
     await userEvent.type(ageInput, "20", {
-      delay: 100,
+      delay: 100
     });
-  },
+  }
 };
 
 // emailの入力
@@ -43,12 +43,12 @@ export const InputEmail: Story = {
     const canvas = within(canvasElement);
 
     const emailInput = canvas.getByRole("textbox", {
-      name: "Email",
+      name: "Email"
     });
     await userEvent.type(emailInput, "example-email@email.com", {
-      delay: 100,
+      delay: 100
     });
-  },
+  }
 };
 
 export const InputAll: Story = {
@@ -60,7 +60,7 @@ export const InputAll: Story = {
     // submit
     const canvas = within(ctx.canvasElement);
     const submitButton = canvas.getByRole("button", {
-      name: "Submit",
+      name: "Submit"
     });
     await userEvent.click(submitButton);
 
@@ -68,5 +68,5 @@ export const InputAll: Story = {
     expect(listItems[0]).toHaveTextContent("Name: example-name");
     expect(listItems[1]).toHaveTextContent("Age: 20");
     expect(listItems[2]).toHaveTextContent("Email: example-email");
-  },
+  }
 };
