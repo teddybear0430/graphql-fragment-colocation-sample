@@ -17,12 +17,14 @@ export const CHARACTER_FIELD = graphql(`
   }
 `);
 
-export function Character(props: {
+export function Character({
+  character: _character
+}: {
   character: FragmentType<typeof CHARACTER_FIELD>;
 }) {
   // useFragmentを使うことで、Fragment Colocationで定義したフィールドからデータを取り出すことができる
   // 逆にuseFragment経由でなければデータの取り出しはできない
-  const character = useFragment(CHARACTER_FIELD, props.character);
+  const character = useFragment(CHARACTER_FIELD, _character);
   return (
     <div>
       <p>{character.name?.native}</p>

@@ -1,5 +1,5 @@
-import { UserForm } from "../components/UserForm/UserForm";
+import { ContactPage } from "~/features";
 
 export const component = function Page() {
-  return <UserForm />;
+  return <ContactPage />;
 };
