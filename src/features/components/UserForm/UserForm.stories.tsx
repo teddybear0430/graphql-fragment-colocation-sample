@@ -3,6 +3,7 @@ import { UserForm } from "./UserForm";
 import { expect, within, userEvent } from "@storybook/test";
 
 const meta = {
+  title: "features/components/UserForm",
   component: UserForm
 } satisfies Meta<typeof UserForm>;
 

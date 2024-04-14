@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { makeFragmentData } from "../../gql/fragment-masking";
+import { makeFragmentData } from "~/gql/fragment-masking";
 
 import { Character, CHARACTER_FIELD } from "./Character";
 
 const meta = {
-  title: "components/Character",
+  title: "features/components/Character",
   component: Character
 } satisfies Meta<typeof Character>;
 
